@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Lumbre",
+  "version": "0.1.0",
+  "description": "Lector de archivos Markdown. Abre, renderiza y navega .md sin salir del navegador.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Lumbre — abrir lector"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumbre</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-name">LUMBRE</span>
+      <span class="brand-dot" aria-hidden="true"></span>
+    </div>
+    <div class="meta" id="meta" aria-live="polite"></div>
+    <div class="actions">
+      <button class="btn btn-secondary" id="open-btn" type="button">Abrir .md</button>
+      <button class="btn btn-ghost" id="toggle-raw-btn" type="button" hidden>Ver crudo</button>
+      <button class="btn btn-ghost" id="copy-btn" type="button" hidden>Copiar HTML</button>
+      <button class="btn btn-ghost" id="close-btn" type="button" hidden>Cerrar</button>
+    </div>
+  </header>
+
+  <input type="file" id="file-input" accept=".md,.markdown,text/markdown,text/plain" hidden>
+
+  <main class="stage" id="stage">
+    <section class="dropzone" id="dropzone" tabindex="0" aria-label="Suelta un archivo .md o presiona para elegir">
+      <div class="dropzone-inner">
+        <div class="dropzone-glyph" aria-hidden="true"></div>
+        <h1 class="dropzone-title">Suelta un <code>.md</code> aquí</h1>
+        <p class="dropzone-sub">o presiona <kbd>Abrir .md</kbd> arriba.</p>
+        <p class="dropzone-hint">Funciona con cualquier Markdown — incluyendo los <code>tabs-DD-MM-YYYY.md</code> exportados por Cinder.</p>
+      </div>
+    </section>
+
+    <article class="reader" id="reader" hidden></article>
+    <pre class="raw" id="raw" hidden></pre>
+  </main>
+
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+
+  <script src="markdown.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>
